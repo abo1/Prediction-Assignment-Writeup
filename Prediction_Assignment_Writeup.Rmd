@@ -1,0 +1,40 @@
+Peer Assessments /Prediction Assignment Writeup
+========================================================
+
+Download and load training set and test set:
+
+```{r}
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", destfile = "./data/pml-training.csv", method = "curl")
+
+download.file("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", destfile = "./data/pml-testing.csv", method = "curl")
+
+training <- read.csv("./data/pml-training.csv")
+testing <- read.csv("./data/pml-testing.csv")
+
+```
+
+
+Names:
+```{r}
+names(training)
+```
+
+Class:
+````{r}
+table(training$classe)
+```
+
+# Model
+```{r}
+library(caret)
+##modFit <- train(classe ~ ., method = "rpart", data = training) 
+```
+
+
+
+
+
+
+
+
+
